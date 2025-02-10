@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Auth-Hexagonal-Arch-Module")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8de412daafb333f844dbb10da0ce72bf69bc2a57")]
 [assembly: System.Reflection.AssemblyProductAttribute("Auth-Hexagonal-Arch-Module")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Auth-Hexagonal-Arch-Module")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
