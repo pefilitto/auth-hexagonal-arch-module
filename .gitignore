@@ -1,9 +1,5 @@
-﻿# Ignorar configurações locais e credenciais sensíveis
-appsettings.json
-appsettings.Development.json
-secrets.json
+﻿appsettings.json
 
-# Ignorar arquivos compilados
 bin/
 obj/
 *.dll
@@ -11,25 +7,21 @@ obj/
 *.pdb
 *.log
 
-# Ignorar arquivos gerados pelo Visual Studio
-.vscode/
+.idea/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
-# Ignorar arquivos do Rider / JetBrains
+*.iml
+*.ipr
+*.iws
 .idea/
+Auth-Hexagonal-Arch-Module/
 
-# Ignorar dependências do Node (caso use frontend com React)
-node_modules/
-
-# Ignorar arquivos de build e deploy
 publish/
 wwwroot/
 
-# Ignorar arquivos de migração específicos
-Migrations/
-
-# Ignorar a pasta Properties (caso queira)
 Properties/
+
+Migrations/

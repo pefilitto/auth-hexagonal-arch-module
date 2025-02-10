@@ -1,12 +1,16 @@
-using auth_hexagonal_arch_module.Infrastructure.Configuration;
+using auth_hexagonal_arch_module.Infrastructure.Interfaces;
+using auth_hexagonal_arch_module.Infrastructure.Repository.User;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi();
+builder.Services.AddScoped<ApplicationPostgresContext>(provider =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("PostgresConnection");
+    return new ApplicationPostgresContext(connectionString);
+});
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
+builder.Services.AddScoped<IUserPostgresRepository, UserPostgresRepository>();
 
 var app = builder.Build();
 
