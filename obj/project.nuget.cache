@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QHPSdsbMo6Y=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pedro Filitto\\Desktop\\Auth-Hexagonal-Arch-Module\\Auth-Hexagonal-Arch-Module.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pedro Filitto\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\Pedro Filitto\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
