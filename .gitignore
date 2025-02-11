@@ -1,6 +1,4 @@
-﻿appsettings.json
-
-bin/
+﻿bin/
 obj/
 *.dll
 *.exe
@@ -12,6 +10,8 @@ obj/
 *.user
 *.userosscache
 *.sln.docstates
+
+.env
 
 *.iml
 *.ipr

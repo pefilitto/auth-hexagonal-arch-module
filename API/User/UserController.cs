@@ -1,28 +1,57 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using auth_hexagonal_arch_module.Domain.Services;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace auth_hexagonal_arch_module.API.User;
 
 [ApiController]
-[Route("api/[user]")]
+[Route("/user")]
 public class UserController : Controller
 {
+    private readonly IUserService _userService;
+    public UserController(IUserService userService)
+    {
+        _userService = userService;
+    }
+
     [HttpGet]
     public IActionResult Get()
     {
-        return Ok();
+        try
+        {
+            return Ok(_userService.Get());
+        }
+        catch (Exception ex)
+        {
+            return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+        }
     }
 
     [HttpGet("{id}")]
     public IActionResult GetById(int id)
     {
-        return Ok();
+        try
+        {
+            return Ok(_userService.GetById(id));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+        }
     }
 
     [HttpPost]
     [Route("register")]
     public IActionResult Post()
     {
-        return Ok();
+        try
+        {
+            var user = new Domain.Entities.User();
+            return Ok(_userService.Save(user));
+        }
+        catch (Exception ex)
+        {
+            return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
+        }
     }
 }
